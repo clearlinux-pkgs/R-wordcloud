@@ -4,7 +4,7 @@
 #
 Name     : R-wordcloud
 Version  : 2.6
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/wordcloud_2.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/wordcloud_2.6.tar.gz
 Summary  : Word Clouds
@@ -31,21 +31,22 @@ lib components for the R-wordcloud package.
 
 %prep
 %setup -q -c -n wordcloud
+cd %{_builddir}/wordcloud
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1584116665
+export SOURCE_DATE_EPOCH=1589565908
 
 %install
-export SOURCE_DATE_EPOCH=1584116665
+export SOURCE_DATE_EPOCH=1589565908
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
