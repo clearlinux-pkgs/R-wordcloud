@@ -4,7 +4,7 @@
 #
 Name     : R-wordcloud
 Version  : 2.6
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/wordcloud_2.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/wordcloud_2.6.tar.gz
 Summary  : Word Clouds
